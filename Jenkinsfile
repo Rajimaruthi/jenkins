@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'master', git credentialsId: '1ae91a36-5f63-4e05-8c86-1742a0e4f2b7', url: 'https://github.com/Rajimaruthi/jenkins.git'
+                git credentialsId: '1ae91a36-5f63-4e05-8c86-1742a0e4f2b7', 
+                url: 'https://github.com/Rajimaruthi/jenkins.git',
+                git branch: 'master'
             }
         }
         stage('Build') {
